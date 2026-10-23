@@ -1,0 +1,37 @@
+resume_id,method,Precision@1,Recall@3,nDCG@3,MRR,top_role,top_relevance
+R01,semantic_score,1.0,0.6,1.0,1.0,ML Engineer,2
+R02,semantic_score,1.0,1.0,1.0,1.0,Data Analyst,2
+R03,semantic_score,1.0,0.5,1.0,1.0,Backend Python Developer,2
+R04,semantic_score,1.0,1.0,1.0,1.0,Frontend Developer,2
+R05,semantic_score,1.0,1.0,1.0,1.0,DevOps Engineer,2
+R06,semantic_score,1.0,1.0,1.0,1.0,NLP Engineer,2
+R07,semantic_score,1.0,1.0,1.0,1.0,Computer Vision Engineer,2
+R08,semantic_score,1.0,1.0,1.0,1.0,Database Developer,2
+R09,semantic_score,1.0,1.0,1.0,1.0,Data Analyst,2
+R10,semantic_score,0.0,0.0,0.0,0.2,Data Analyst,0
+R11,semantic_score,1.0,1.0,1.0,1.0,Backend Python Developer,1
+R12,semantic_score,1.0,0.6,1.0,1.0,Data Analyst,1
+R01,tfidf_score,1.0,0.6,1.0,1.0,ML Engineer,2
+R02,tfidf_score,1.0,1.0,1.0,1.0,Data Analyst,2
+R03,tfidf_score,1.0,0.5,1.0,1.0,Backend Python Developer,2
+R04,tfidf_score,1.0,0.5,0.8262346571285599,1.0,Frontend Developer,2
+R05,tfidf_score,1.0,1.0,1.0,1.0,DevOps Engineer,2
+R06,tfidf_score,1.0,1.0,1.0,1.0,NLP Engineer,2
+R07,tfidf_score,1.0,0.6666666666666666,0.878961873034099,1.0,Computer Vision Engineer,2
+R08,tfidf_score,1.0,1.0,1.0,1.0,Database Developer,2
+R09,tfidf_score,1.0,0.5,0.8262346571285599,1.0,Data Analyst,2
+R10,tfidf_score,1.0,1.0,1.0,1.0,DevOps Engineer,1
+R11,tfidf_score,1.0,1.0,1.0,1.0,Backend Python Developer,1
+R12,tfidf_score,1.0,0.6,1.0,1.0,Data Analyst,1
+R01,hybrid_score,1.0,0.6,1.0,1.0,ML Engineer,2
+R02,hybrid_score,1.0,1.0,1.0,1.0,Data Analyst,2
+R03,hybrid_score,1.0,0.5,1.0,1.0,Backend Python Developer,2
+R04,hybrid_score,1.0,1.0,1.0,1.0,Frontend Developer,2
+R05,hybrid_score,1.0,1.0,1.0,1.0,DevOps Engineer,2
+R06,hybrid_score,1.0,1.0,1.0,1.0,NLP Engineer,2
+R07,hybrid_score,1.0,1.0,1.0,1.0,Computer Vision Engineer,2
+R08,hybrid_score,1.0,1.0,1.0,1.0,Database Developer,2
+R09,hybrid_score,1.0,1.0,1.0,1.0,Data Analyst,2
+R10,hybrid_score,0.0,0.0,0.0,0.2,Data Analyst,0
+R11,hybrid_score,1.0,1.0,1.0,1.0,Backend Python Developer,1
+R12,hybrid_score,1.0,0.6,1.0,1.0,Data Analyst,1

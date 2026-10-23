@@ -1,0 +1,16 @@
+.DS_Store
+.ipynb_checkpoints/
+__pycache__/
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+Rama_Sanjana*.pdf
+resume_match_results.json
+resume_job_ranking_evaluation.csv
+resume_ranking_metric_comparison.csv
+resume_ranking_metrics_by_resume.csv
+skill_comparison.csv
+
+*.ipynb.backup
