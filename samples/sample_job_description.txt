@@ -1,0 +1,13 @@
+Machine Learning Engineer
+Responsibilities:
+- Build NLP and retrieval pipelines and deploy models as services
+Requirements:
+- 3+ years of experience in applied machine learning
+- Strong Python and SQL skills
+- Experience with PyTorch or TensorFlow
+- Experience with LangChain / RAG and Docker
+- Experience with Kubernetes
+- Bachelor's degree in Computer Science or related field
+Nice to have:
+- AWS Certified Machine Learning certification
+- Airflow, Spark

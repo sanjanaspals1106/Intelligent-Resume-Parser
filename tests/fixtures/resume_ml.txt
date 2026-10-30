@@ -1,0 +1,36 @@
+Priya Sharma
+priya.sharma@example.com | +91 98765 43210 | linkedin.com/in/priya-sharma-ml | github.com/priyasharma
+
+SUMMARY
+Machine learning engineer with 3 years of experience building NLP and recommendation systems.
+
+EXPERIENCE
+Machine Learning Engineer | Acme Analytics Pvt Ltd | Jan 2022 - Present
+• Built a RAG pipeline with LangChain and FAISS to answer support queries, cutting average handling time by 30%.
+• Fine-tuned BERT models using PyTorch and Hugging Face for ticket classification.
+• Deployed services with FastAPI and Docker on AWS.
+
+Data Science Intern
+Beta Labs, Bangalore                                  Jun 2021 - Dec 2021
+- Developed churn prediction models with scikit-learn and pandas.
+- Presented findings to stakeholders.
+
+PROJECTS
+Resume Parser | Python, Streamlit, scikit-learn
+• Parsed PDF resumes and ranked candidates using TF-IDF; reached 85% accuracy on a small test set.
+Movie Recommender
+Collaborative filtering system built with PyTorch. Won first place at a college hackathon.
+Technologies: Python, PyTorch, Flask
+
+EDUCATION
+B.Tech in Computer Science and Engineering, Indian Institute of Technology Madras, 2017 - 2021
+CGPA: 8.7/10
+
+CERTIFICATIONS
+• AWS Certified Cloud Practitioner - Amazon Web Services, 2023
+• Deep Learning Specialization, Coursera (DeepLearning.AI)
+
+SKILLS
+Languages: Python, SQL, C++
+ML: PyTorch, TensorFlow, scikit-learn, Hugging Face, Machine Learning, NLP
+Tools: Git, Docker, k8s, Tableau, Figma-like prototyping

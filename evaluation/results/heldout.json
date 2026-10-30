@@ -1,0 +1,459 @@
+{
+  "generated": "2026-10-30T19:57:35",
+  "data": "SYNTHETIC test set",
+  "mode": "test",
+  "seed": 20250217,
+  "system_sha256_16": "7fe704fdfa6147c2",
+  "heldout_generator_sha256_16": "960f757762a9cfc2",
+  "dataset_sha256_16": "91d9f7089c0ee631",
+  "encoder": "all-MiniLM-L6-v2",
+  "n_candidates": 140,
+  "n_jobs": 10,
+  "composition": {
+    "archetypes": {
+      "ambiguous": 20,
+      "exact": 20,
+      "near_miss": 20,
+      "paraphrased": 20,
+      "project": 20,
+      "stuffed": 10,
+      "transferable": 20,
+      "unrelated": 10
+    },
+    "layouts": {
+      "L1": 23,
+      "L2": 24,
+      "L3": 24,
+      "L4": 23,
+      "L5": 23,
+      "L6": 23
+    },
+    "label_distribution_all_pairs": {
+      "0": 1026,
+      "1": 265,
+      "2": 34,
+      "3": 75
+    }
+  },
+  "ranking_summary": {
+    "Original baseline (dictionary skills + TF-IDF)": {
+      "ndcg@5": 0.6934,
+      "ndcg@10": 0.6935,
+      "map": 0.6405,
+      "p@5": 0.68,
+      "mrr": 0.95,
+      "spearman": 0.5527
+    },
+    "TF-IDF only": {
+      "ndcg@5": 0.7295,
+      "ndcg@10": 0.7563,
+      "map": 0.7072,
+      "p@5": 0.76,
+      "mrr": 0.95,
+      "spearman": 0.4706
+    },
+    "Skill alignment only": {
+      "ndcg@5": 0.6829,
+      "ndcg@10": 0.6817,
+      "map": 0.6924,
+      "p@5": 0.72,
+      "mrr": 0.9,
+      "spearman": 0.7081
+    },
+    "Hybrid v1 (initial config, before development tuning)": {
+      "ndcg@5": 0.7853,
+      "ndcg@10": 0.7756,
+      "map": 0.737,
+      "p@5": 0.74,
+      "mrr": 1.0,
+      "spearman": 0.6663
+    },
+    "FINAL hybrid, MiniLM encoder": {
+      "ndcg@5": 0.7768,
+      "ndcg@10": 0.7619,
+      "map": 0.7042,
+      "p@5": 0.72,
+      "mrr": 0.9,
+      "spearman": 0.6856
+    },
+    "FINAL hybrid, fallback concept encoder": {
+      "ndcg@5": 0.7745,
+      "ndcg@10": 0.7612,
+      "map": 0.7032,
+      "p@5": 0.74,
+      "mrr": 0.95,
+      "spearman": 0.649
+    },
+    "Final without skills dimension (ablation)": {
+      "ndcg@5": 0.7777,
+      "ndcg@10": 0.7516,
+      "map": 0.6609,
+      "p@5": 0.74,
+      "mrr": 0.8333,
+      "spearman": 0.6536
+    }
+  },
+  "ranking_paired_vs_baseline": {
+    "TF-IDF only": {
+      "ndcg@10": {
+        "mean_gain": 0.0628,
+        "ci95": [
+          0.0253,
+          0.1042
+        ],
+        "jobs_improved": 8,
+        "jobs_worse": 2
+      },
+      "map": {
+        "mean_gain": 0.0667,
+        "ci95": [
+          0.0016,
+          0.1256
+        ],
+        "jobs_improved": 6,
+        "jobs_worse": 4
+      }
+    },
+    "Skill alignment only": {
+      "ndcg@10": {
+        "mean_gain": -0.0118,
+        "ci95": [
+          -0.1176,
+          0.0923
+        ],
+        "jobs_improved": 5,
+        "jobs_worse": 5
+      },
+      "map": {
+        "mean_gain": 0.0519,
+        "ci95": [
+          -0.0529,
+          0.1618
+        ],
+        "jobs_improved": 6,
+        "jobs_worse": 4
+      }
+    },
+    "Hybrid v1 (initial config, before development tuning)": {
+      "ndcg@10": {
+        "mean_gain": 0.0821,
+        "ci95": [
+          -0.0095,
+          0.1761
+        ],
+        "jobs_improved": 5,
+        "jobs_worse": 5
+      },
+      "map": {
+        "mean_gain": 0.0965,
+        "ci95": [
+          0.0106,
+          0.1793
+        ],
+        "jobs_improved": 7,
+        "jobs_worse": 3
+      }
+    },
+    "FINAL hybrid, MiniLM encoder": {
+      "ndcg@10": {
+        "mean_gain": 0.0684,
+        "ci95": [
+          -0.0203,
+          0.1611
+        ],
+        "jobs_improved": 6,
+        "jobs_worse": 4
+      },
+      "map": {
+        "mean_gain": 0.0637,
+        "ci95": [
+          -0.0122,
+          0.1423
+        ],
+        "jobs_improved": 6,
+        "jobs_worse": 4
+      }
+    },
+    "FINAL hybrid, fallback concept encoder": {
+      "ndcg@10": {
+        "mean_gain": 0.0677,
+        "ci95": [
+          -0.0415,
+          0.1874
+        ],
+        "jobs_improved": 6,
+        "jobs_worse": 4
+      },
+      "map": {
+        "mean_gain": 0.0627,
+        "ci95": [
+          -0.0203,
+          0.1548
+        ],
+        "jobs_improved": 6,
+        "jobs_worse": 4
+      }
+    },
+    "Final without skills dimension (ablation)": {
+      "ndcg@10": {
+        "mean_gain": 0.0581,
+        "ci95": [
+          -0.0193,
+          0.1491
+        ],
+        "jobs_improved": 6,
+        "jobs_worse": 4
+      },
+      "map": {
+        "mean_gain": 0.0204,
+        "ci95": [
+          -0.0381,
+          0.0832
+        ],
+        "jobs_improved": 6,
+        "jobs_worse": 4
+      }
+    }
+  },
+  "per_job_final": {
+    "H1": {
+      "ndcg@5": 0.8281227542004858,
+      "ndcg@10": 0.8430668984468124,
+      "map": 0.7829090602615645,
+      "p@5": 1.0,
+      "mrr": 1.0,
+      "spearman": 0.7473234120127934
+    },
+    "H2": {
+      "ndcg@5": 0.7421841313007286,
+      "ndcg@10": 0.8585524483386304,
+      "map": 0.7657142857142857,
+      "p@5": 0.6,
+      "mrr": 1.0,
+      "spearman": 0.7801243439755747
+    },
+    "H3": {
+      "ndcg@5": 0.8875385049894213,
+      "ndcg@10": 0.8961557149116405,
+      "map": 0.8231019925700777,
+      "p@5": 0.8,
+      "mrr": 1.0,
+      "spearman": 0.7470873820196448
+    },
+    "H4": {
+      "ndcg@5": 0.8875385049894213,
+      "ndcg@10": 0.7973924363885961,
+      "map": 0.6934080298786182,
+      "p@5": 0.8,
+      "mrr": 1.0,
+      "spearman": 0.7191618351384571
+    },
+    "H5": {
+      "ndcg@5": 0.8747985572776802,
+      "ndcg@10": 0.8118055569002635,
+      "map": 0.804458041958042,
+      "p@5": 0.8,
+      "mrr": 1.0,
+      "spearman": 0.6471786777532543
+    },
+    "H6": {
+      "ndcg@5": 0.7092912526226147,
+      "ndcg@10": 0.6654055143398526,
+      "map": 0.6688869902027798,
+      "p@5": 0.8,
+      "mrr": 0.5,
+      "spearman": 0.6099993440993497
+    },
+    "H7": {
+      "ndcg@5": 0.7623370622671015,
+      "ndcg@10": 0.7220259006384893,
+      "map": 0.6891333974667306,
+      "p@5": 0.6,
+      "mrr": 1.0,
+      "spearman": 0.620822037103259
+    },
+    "H8": {
+      "ndcg@5": 0.8747985572776802,
+      "ndcg@10": 0.8246809191600062,
+      "map": 0.7563366750208854,
+      "p@5": 0.8,
+      "mrr": 1.0,
+      "spearman": 0.7456867964951465
+    },
+    "H9": {
+      "ndcg@5": 0.5840898099002949,
+      "ndcg@10": 0.6408773228470737,
+      "map": 0.5508699633699634,
+      "p@5": 0.6,
+      "mrr": 0.5,
+      "spearman": 0.5733094291181461
+    },
+    "H10": {
+      "ndcg@5": 0.6169826885784089,
+      "ndcg@10": 0.5592338401311057,
+      "map": 0.5071351152872892,
+      "p@5": 0.4,
+      "mrr": 1.0,
+      "spearman": 0.6650987952395766
+    }
+  },
+  "archetype_mean_rank": {
+    "ambiguous": {
+      "n": 20,
+      "mean_grade": 2.7,
+      "Original_mean_rank": 12.4,
+      "FINAL_mean_rank": 7.8
+    },
+    "exact": {
+      "n": 20,
+      "mean_grade": 3,
+      "Original_mean_rank": 6.0,
+      "FINAL_mean_rank": 2.4
+    },
+    "near_miss": {
+      "n": 20,
+      "mean_grade": 1,
+      "Original_mean_rank": 14.7,
+      "FINAL_mean_rank": 6.6
+    },
+    "paraphrased": {
+      "n": 20,
+      "mean_grade": 3,
+      "Original_mean_rank": 22.4,
+      "FINAL_mean_rank": 14.1
+    },
+    "project": {
+      "n": 20,
+      "mean_grade": 2,
+      "Original_mean_rank": 14.3,
+      "FINAL_mean_rank": 15.6
+    },
+    "stuffed": {
+      "n": 10,
+      "mean_grade": 0.1,
+      "Original_mean_rank": 13.7,
+      "FINAL_mean_rank": 22.6
+    },
+    "transferable": {
+      "n": 20,
+      "mean_grade": 3,
+      "Original_mean_rank": 16.4,
+      "FINAL_mean_rank": 11.9
+    },
+    "unrelated": {
+      "n": 10,
+      "mean_grade": 0.2,
+      "Original_mean_rank": 90.7,
+      "FINAL_mean_rank": 83.4
+    }
+  },
+  "extraction": {
+    "overall_excluding_skills": {
+      "precision": 0.9831,
+      "recall": 0.9676,
+      "f1": 0.9753,
+      "tp": 1223,
+      "predicted": 1244,
+      "gold": 1264
+    },
+    "per_field": {
+      "name": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 140,
+        "predicted": 140,
+        "gold": 140
+      },
+      "email": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 140,
+        "predicted": 140,
+        "gold": 140
+      },
+      "phone": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 140,
+        "predicted": 140,
+        "gold": 140
+      },
+      "skills": {
+        "precision": 0.8352,
+        "recall": 0.9327,
+        "f1": 0.8813,
+        "tp": 527,
+        "predicted": 631,
+        "gold": 565
+      },
+      "exp_title": {
+        "precision": 0.9954,
+        "recall": 0.9909,
+        "f1": 0.9931,
+        "tp": 217,
+        "predicted": 218,
+        "gold": 219
+      },
+      "exp_org": {
+        "precision": 0.9908,
+        "recall": 0.9863,
+        "f1": 0.9886,
+        "tp": 216,
+        "predicted": 218,
+        "gold": 219
+      },
+      "edu_institution": {
+        "precision": 1.0,
+        "recall": 0.9214,
+        "f1": 0.9591,
+        "tp": 129,
+        "predicted": 129,
+        "gold": 140
+      },
+      "edu_level": {
+        "precision": 1.0,
+        "recall": 0.9214,
+        "f1": 0.9591,
+        "tp": 129,
+        "predicted": 129,
+        "gold": 140
+      },
+      "project_name": {
+        "precision": 1.0,
+        "recall": 0.8554,
+        "f1": 0.9221,
+        "tp": 71,
+        "predicted": 71,
+        "gold": 83
+      },
+      "cert_name": {
+        "precision": 0.6949,
+        "recall": 0.9535,
+        "f1": 0.8039,
+        "tp": 41,
+        "predicted": 59,
+        "gold": 43
+      }
+    },
+    "ambiguous_only_excluding_skills": {
+      "precision": 0.9826,
+      "recall": 0.9286,
+      "f1": 0.9548,
+      "tp": 169,
+      "predicted": 172,
+      "gold": 182
+    },
+    "non_ambiguous_excluding_skills": {
+      "precision": 0.9808,
+      "recall": 0.9766,
+      "f1": 0.9787,
+      "tp": 918,
+      "predicted": 936,
+      "gold": 940
+    },
+    "skills_outside_taxonomy_recovered": "0/38"
+  }
+}

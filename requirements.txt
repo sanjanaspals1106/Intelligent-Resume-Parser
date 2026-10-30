@@ -1,6 +1,15 @@
 pymupdf
+python-docx
 pandas
 numpy
 scikit-learn
-matplotlib
+streamlit
+# Optional but recommended: dense semantic embeddings (falls back to a built-in encoder without it)
 sentence-transformers
+# Optional: OCR for scanned PDFs (also needs the Tesseract binary: brew install tesseract / apt install tesseract-ocr)
+pytesseract
+pillow
+# Development / evaluation
+pytest
+matplotlib   # original notebook; evaluation also uses its bundled DejaVu fonts to render Unicode test PDFs
+# Browser end-to-end tests (optional): pip install playwright, plus a Chromium binary

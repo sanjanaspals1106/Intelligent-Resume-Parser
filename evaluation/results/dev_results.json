@@ -1,0 +1,471 @@
+{
+  "generated": "2026-10-30T19:58:38",
+  "seed": 7,
+  "data": "SYNTHETIC development set (templated resumes, latent-truth labels)",
+  "quick_mode": false,
+  "extraction": {
+    "n_resumes": 66,
+    "overall_excluding_skills": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 937,
+      "predicted": 937,
+      "gold": 937
+    },
+    "per_field": {
+      "name": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 66,
+        "predicted": 66,
+        "gold": 66
+      },
+      "email": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 66,
+        "predicted": 66,
+        "gold": 66
+      },
+      "phone": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 66,
+        "predicted": 66,
+        "gold": 66
+      },
+      "linkedin": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 66,
+        "predicted": 66,
+        "gold": 66
+      },
+      "github": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 66,
+        "predicted": 66,
+        "gold": 66
+      },
+      "skills": {
+        "precision": 0.87,
+        "recall": 0.9976,
+        "f1": 0.9295,
+        "tp": 415,
+        "predicted": 477,
+        "gold": 416
+      },
+      "edu_institution": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 66,
+        "predicted": 66,
+        "gold": 66
+      },
+      "edu_level": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 66,
+        "predicted": 66,
+        "gold": 66
+      },
+      "exp_title": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 108,
+        "predicted": 108,
+        "gold": 108
+      },
+      "exp_org": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 108,
+        "predicted": 108,
+        "gold": 108
+      },
+      "exp_dates": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 108,
+        "predicted": 108,
+        "gold": 108
+      },
+      "project_name": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 93,
+        "predicted": 93,
+        "gold": 93
+      },
+      "cert_name": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 58,
+        "predicted": 58,
+        "gold": 58
+      }
+    },
+    "by_layout": {
+      "classic": {
+        "n": 16,
+        "micro_f1_excluding_skills": 1.0,
+        "skills_f1": 0.9362
+      },
+      "pipes": {
+        "n": 17,
+        "micro_f1_excluding_skills": 1.0,
+        "skills_f1": 0.912
+      },
+      "docx": {
+        "n": 17,
+        "micro_f1_excluding_skills": 1.0,
+        "skills_f1": 0.9398
+      },
+      "minimal": {
+        "n": 16,
+        "micro_f1_excluding_skills": 1.0,
+        "skills_f1": 0.932
+      }
+    },
+    "paraphrased_resumes_mean_skills_detected": 3.08,
+    "ocr_scanned_pdfs": {
+      "tesseract_available": true,
+      "n": 6,
+      "seconds_per_resume": 0.87,
+      "overall_excluding_skills": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 92,
+        "predicted": 92,
+        "gold": 92
+      },
+      "per_field_f1": {
+        "name": 1.0,
+        "email": 1.0,
+        "phone": 1.0,
+        "linkedin": 1.0,
+        "github": 1.0,
+        "edu_institution": 1.0,
+        "edu_level": 1.0,
+        "exp_title": 1.0,
+        "exp_org": 1.0,
+        "exp_dates": 1.0,
+        "project_name": 1.0,
+        "cert_name": 1.0,
+        "skills": 0.9254
+      },
+      "same_resumes_text_layer_f1": 1.0
+    }
+  },
+  "matching": {
+    "n_resumes": 66,
+    "n_jobs": 8,
+    "encoder_main": "hybrid, MiniLM encoder (default)",
+    "summary": {
+      "baseline (original: dict skills + TF-IDF)": {
+        "ndcg@5": 0.7885,
+        "ndcg@10": 0.7603,
+        "map": 0.7235,
+        "p@5": 0.85,
+        "mrr": 0.9375,
+        "spearman": 0.5215,
+        "std_across_jobs_ndcg@10": 0.1482
+      },
+      "lexical only (TF-IDF)": {
+        "ndcg@5": 0.7085,
+        "ndcg@10": 0.7326,
+        "map": 0.7198,
+        "p@5": 0.8,
+        "mrr": 0.9375,
+        "spearman": 0.4538,
+        "std_across_jobs_ndcg@10": 0.1005
+      },
+      "skills only (taxonomy alignment)": {
+        "ndcg@5": 0.8452,
+        "ndcg@10": 0.8304,
+        "map": 0.8042,
+        "p@5": 0.875,
+        "mrr": 1.0,
+        "spearman": 0.5506,
+        "std_across_jobs_ndcg@10": 0.0769
+      },
+      "hybrid, concept-hash fallback encoder": {
+        "ndcg@5": 0.8642,
+        "ndcg@10": 0.8741,
+        "map": 0.8279,
+        "p@5": 0.9,
+        "mrr": 1.0,
+        "spearman": 0.5971,
+        "std_across_jobs_ndcg@10": 0.0795
+      },
+      "hybrid, MiniLM encoder (default)": {
+        "ndcg@5": 0.8559,
+        "ndcg@10": 0.8699,
+        "map": 0.8427,
+        "p@5": 0.875,
+        "mrr": 1.0,
+        "spearman": 0.631,
+        "std_across_jobs_ndcg@10": 0.0961
+      },
+      "  ablation: hybrid MiniLM without skills": {
+        "ndcg@5": 0.8293,
+        "ndcg@10": 0.8786,
+        "map": 0.8611,
+        "p@5": 0.85,
+        "mrr": 1.0,
+        "spearman": 0.6615,
+        "std_across_jobs_ndcg@10": 0.0693
+      },
+      "  ablation: hybrid MiniLM without experience": {
+        "ndcg@5": 0.8452,
+        "ndcg@10": 0.8616,
+        "map": 0.8287,
+        "p@5": 0.875,
+        "mrr": 1.0,
+        "spearman": 0.5924,
+        "std_across_jobs_ndcg@10": 0.0967
+      },
+      "  ablation: hybrid MiniLM without semantic": {
+        "ndcg@5": 0.8506,
+        "ndcg@10": 0.8637,
+        "map": 0.8279,
+        "p@5": 0.875,
+        "mrr": 1.0,
+        "spearman": 0.6101,
+        "std_across_jobs_ndcg@10": 0.0834
+      },
+      "  ablation: hybrid MiniLM without projects": {
+        "ndcg@5": 0.8529,
+        "ndcg@10": 0.8603,
+        "map": 0.8397,
+        "p@5": 0.875,
+        "mrr": 1.0,
+        "spearman": 0.6315,
+        "std_across_jobs_ndcg@10": 0.0799
+      },
+      "  ablation: hybrid MiniLM without education": {
+        "ndcg@5": 0.8559,
+        "ndcg@10": 0.8699,
+        "map": 0.8427,
+        "p@5": 0.875,
+        "mrr": 1.0,
+        "spearman": 0.6312,
+        "std_across_jobs_ndcg@10": 0.0961
+      },
+      "  ablation: hybrid MiniLM without certifications": {
+        "ndcg@5": 0.8559,
+        "ndcg@10": 0.87,
+        "map": 0.8426,
+        "p@5": 0.875,
+        "mrr": 1.0,
+        "spearman": 0.6314,
+        "std_across_jobs_ndcg@10": 0.096
+      },
+      "  ablation: hybrid MiniLM without lexical": {
+        "ndcg@5": 0.8512,
+        "ndcg@10": 0.8621,
+        "map": 0.84,
+        "p@5": 0.85,
+        "mrr": 1.0,
+        "spearman": 0.6316,
+        "std_across_jobs_ndcg@10": 0.0906
+      }
+    },
+    "paired_vs_baseline": {
+      "lexical only (TF-IDF)": {
+        "mean_ndcg@10_gain": -0.0277,
+        "jobs_improved": 2,
+        "jobs_tied": 0,
+        "jobs_worse": 6,
+        "n_jobs": 8
+      },
+      "skills only (taxonomy alignment)": {
+        "mean_ndcg@10_gain": 0.0701,
+        "jobs_improved": 7,
+        "jobs_tied": 0,
+        "jobs_worse": 1,
+        "n_jobs": 8
+      },
+      "hybrid, concept-hash fallback encoder": {
+        "mean_ndcg@10_gain": 0.1138,
+        "jobs_improved": 8,
+        "jobs_tied": 0,
+        "jobs_worse": 0,
+        "n_jobs": 8
+      },
+      "hybrid, MiniLM encoder (default)": {
+        "mean_ndcg@10_gain": 0.1096,
+        "jobs_improved": 8,
+        "jobs_tied": 0,
+        "jobs_worse": 0,
+        "n_jobs": 8
+      }
+    },
+    "hard_cases_mean_rank": {
+      "paraphrased": {
+        "baseline (original: dict skills + TF-IDF)": {
+          "mean_rank_in_pool": 26.2,
+          "n_pairs": 16,
+          "mean_true_grade": 2.88
+        },
+        "hybrid, MiniLM encoder (default)": {
+          "mean_rank_in_pool": 14.9,
+          "n_pairs": 16,
+          "mean_true_grade": 2.88
+        }
+      },
+      "stuffed": {
+        "baseline (original: dict skills + TF-IDF)": {
+          "mean_rank_in_pool": 4.2,
+          "n_pairs": 8,
+          "mean_true_grade": 0.5
+        },
+        "hybrid, MiniLM encoder (default)": {
+          "mean_rank_in_pool": 9.4,
+          "n_pairs": 8,
+          "mean_true_grade": 0.5
+        }
+      }
+    },
+    "per_job": {
+      "J1": {
+        "ndcg@5": 1.0,
+        "ndcg@10": 0.9598017158972528,
+        "map": 0.936734693877551,
+        "p@5": 1.0,
+        "mrr": 1.0,
+        "spearman": 0.6053616978487327
+      },
+      "J2": {
+        "ndcg@5": 0.9250256699929476,
+        "ndcg@10": 0.9594340622491281,
+        "map": 0.9674523007856342,
+        "p@5": 1.0,
+        "mrr": 1.0,
+        "spearman": 0.7960947521421351
+      },
+      "J3": {
+        "ndcg@5": 0.7853272940061117,
+        "ndcg@10": 0.797711367931204,
+        "map": 0.7657879369737943,
+        "p@5": 0.8,
+        "mrr": 1.0,
+        "spearman": 0.6644961148210627
+      },
+      "J4": {
+        "ndcg@5": 0.8415580415114009,
+        "ndcg@10": 0.97146706444998,
+        "map": 1.0,
+        "p@5": 1.0,
+        "mrr": 1.0,
+        "spearman": 0.5647042627510777
+      },
+      "J5": {
+        "ndcg@5": 0.8860613086902124,
+        "ndcg@10": 0.7953812999039953,
+        "map": 0.7731601731601732,
+        "p@5": 1.0,
+        "mrr": 1.0,
+        "spearman": 0.5026045886254095
+      },
+      "J6": {
+        "ndcg@5": 0.8241253048392847,
+        "ndcg@10": 0.7506148080460792,
+        "map": 0.6024855597224017,
+        "p@5": 0.6,
+        "mrr": 1.0,
+        "spearman": 0.5827169091599764
+      },
+      "J7": {
+        "ndcg@5": 0.8415580415114009,
+        "ndcg@10": 0.9679669425575989,
+        "map": 0.961734693877551,
+        "p@5": 1.0,
+        "mrr": 1.0,
+        "spearman": 0.7355312184462472
+      },
+      "J8": {
+        "ndcg@5": 0.7435934797653384,
+        "ndcg@10": 0.7567804123581163,
+        "map": 0.7344877344877344,
+        "p@5": 0.6,
+        "mrr": 1.0,
+        "spearman": 0.5968753893213492
+      }
+    }
+  },
+  "performance": {
+    "machine": "macOS-15.6.1-arm64-arm-64bit-Mach-O / Python 3.13.9",
+    "encoder": "all-MiniLM-L6-v2",
+    "n_resumes": 66,
+    "seconds_per_resume_mean": 0.022,
+    "median": 0.021,
+    "p95": 0.033,
+    "max": 0.054,
+    "valid_resume_failure_rate": 0.0,
+    "robustness_malformed_inputs": {
+      "empty file": {
+        "handled_without_exception": true,
+        "reported_as_error": true,
+        "message": "File is empty"
+      },
+      "random bytes as PDF": {
+        "handled_without_exception": true,
+        "reported_as_error": true,
+        "message": "Could not open PDF (corrupt or not a PDF): Failed to open stream"
+      },
+      "truncated PDF": {
+        "handled_without_exception": true,
+        "reported_as_error": false,
+        "message": "recovered partial text; parse confidence high"
+      },
+      "text file renamed .pdf": {
+        "handled_without_exception": true,
+        "reported_as_error": true,
+        "message": "Could not open PDF (corrupt or not a PDF): Failed to open stream"
+      },
+      "zip that is not a DOCX": {
+        "handled_without_exception": true,
+        "reported_as_error": true,
+        "message": "File is not a valid DOCX (not a zip container)"
+      },
+      "unsupported extension": {
+        "handled_without_exception": true,
+        "reported_as_error": true,
+        "message": "Unsupported file type (supported: PDF, DOCX)"
+      },
+      "legacy .doc": {
+        "handled_without_exception": true,
+        "reported_as_error": true,
+        "message": "Legacy .doc files are not supported; save the resume as .docx or .pdf"
+      },
+      "password-protected PDF": {
+        "handled_without_exception": true,
+        "reported_as_error": true,
+        "message": "PDF is password-protected"
+      },
+      "blank PDF page": {
+        "handled_without_exception": true,
+        "reported_as_error": true,
+        "message": "Almost no text could be extracted. If this is a scanned PDF, install Tesseract OCR to enable text recognition."
+      }
+    },
+    "all_malformed_inputs_handled_gracefully": true
+  },
+  "total_seconds": 27.7
+}
